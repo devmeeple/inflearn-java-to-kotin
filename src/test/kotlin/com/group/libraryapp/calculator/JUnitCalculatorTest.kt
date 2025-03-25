@@ -43,14 +43,23 @@ class JUnitCalculatorTest {
     }
 
     @Test
-    fun divideExceptionTest() {
+    fun divideExceptionTestUsingApply() {
         val calculator = Calculator(5)
 
-        // TODO: 2025-03-25 Refactor: use Scope functions for cleaner code
         assertThrows<IllegalArgumentException> {
             calculator.divide(0)
-        }.apply {
+        }.apply { // this = IllegalArgumentException
             assertThat(message).isEqualTo("0으로 나눌 수 없습니다")
         }
+    }
+
+    @Test
+    fun divideExceptionTestNotUsingApply() {
+        val calculator = Calculator(5)
+
+        val message = assertThrows<IllegalArgumentException> {
+            calculator.divide(0)
+        }.message
+        assertThat(message).isEqualTo("0으로 나눌 수 없습니다")
     }
 }
