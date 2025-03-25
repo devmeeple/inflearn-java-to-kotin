@@ -8,3 +8,7 @@
     - [Test code using JUnit in JVM - tutorial](https://kotlinlang.org/docs/jvm-test-using-junit.html): JUnit 사용하기
     - [Object declarations and expressions](https://kotlinlang.org/docs/object-declarations.html): 정적 메서드
     - [Scope functions](https://kotlinlang.org/docs/scope-functions.html): `apply`
+- 2.7 JUnit5로 Spring Boot 테스트하기
+- 2.8 유저 관련 기능 테스트 작성하기
+- 2.9 책 관련 기능 테스트 작성하기
+- 2.10 테스트 작성 끝! 다음으로!
