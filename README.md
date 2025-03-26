@@ -75,3 +75,23 @@ assertThat(results).extracting("age").containsExactlyInAnyOrder(29, null)
 - `JPA`의 `orphanRemoval` 옵션의 기본값은 `false`다. `true`로 변경하여 관계를 맺은 `엔티티(entity)`의 데이터까지 함께 삭제한다.
 - 자식을 먼저 삭제하고 부모를 삭제한다.
 - [김영한 'orphanRemoval과 cascade의 관계'](https://www.inflearn.com/community/questions/137740)
+
+## 2.10 테스트 작성 끝! 다음으로!
+
+### 2.10.1 전체 테스트 코드 실행 방법
+
+1. 터미널
+
+```shell
+./gradlew test
+```
+
+- 터미널로 간편하게 테스트 할 수 있다.
+
+2. IDE
+
+> Gralde | Tasks | verification | check
+
+- 에러가 발생했을 때 메시지를 추적하기 용이하다.
+
+- [Getting Started with Gradle](https://www.jetbrains.com/help/idea/getting-started-with-gradle.html)
