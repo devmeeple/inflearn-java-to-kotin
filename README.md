@@ -99,3 +99,26 @@ assertThat(results).extracting("age").containsExactlyInAnyOrder(29, null)
 - 에러가 발생했을 때 메시지를 추적하기 용이하다.
 
 - [Getting Started with Gradle](https://www.jetbrains.com/help/idea/getting-started-with-gradle.html)
+
+# 3. Java 서버를 Kotlin 서버로 리팩터링하자!
+
+- 3.1 Kotlin 리팩터링 계획 세우기
+- 3.2 도메인 계층을 Kotlin으로 변경하기 - Book.java
+- 3.3 도메인 계층을 Kotlin으로 변경하기 - UserLoanHistory.java, User.java
+- 3.4 Kotlin과 JPA를 함께 사용할 때 이야기거리 3가지
+- 3.5 리포지토리를 Kotlin으로 변경하기
+
+## 3.1 Kotlin 리팩터링 계획 세우기
+
+```kotlin
+@Entity
+@Table(name = "members")
+class Member(
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    val id: Long? = null,
+    val name: String
+)
+```
+
+- 앞서, `POJO`를 엄격하게 바라봤다. 하지만 넓게 생각하면 `JPA Entity`와 `POJO`를 모두 만족하는 객체는 존재한다. 실무에서는 다양한 메타데이터가 필요하다.
