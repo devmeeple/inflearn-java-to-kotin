@@ -23,6 +23,7 @@ public class User {
 
     private Integer age;
 
+    // TODO: 2025-03-26 orphanRemoval, 자식 관계까지 함께 삭제하기
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private final List<UserLoanHistory> userLoanHistories = new ArrayList<>();
 
@@ -54,6 +55,10 @@ public class User {
         targetHistory.doReturn();
     }
 
+    public Long getId() {
+        return id;
+    }
+
     @NotNull
     public String getName() {
         return name;
@@ -62,10 +67,6 @@ public class User {
     @Nullable
     public Integer getAge() {
         return age;
-    }
-
-    public Long getId() {
-        return id;
     }
 
 }

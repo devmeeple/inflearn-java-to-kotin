@@ -57,3 +57,21 @@ assertThat(results).extracting("age").containsExactlyInAnyOrder(29, null)
 - `containsExactlyInAnyOrder`: 순서와 상관없이 컬렉션에 정확히 포함하고 있는지 검증한다.
 
 - [AssertJ - fluent assertions java library](https://assertj.github.io/doc/#assertj-core-assertions-guide())
+
+## 2.9 책 관련 기능 테스트 작성하기
+
+### 2.9.1 후행 쉼표(Trailing comma)
+
+> Settings/Preferences | Editor | Code Style | Kotlin, open the Other tab and select the Use trailing comma option.
+
+자바에서는 후행 쉼표를 사용할 수 없었다. 하지만 코틀린은 후행 쉼표를 사용할 수 있고 권장한다. 작은 배려다.
+
+- [Coding conventions](https://kotlinlang.org/docs/coding-conventions.html#trailing-commas)
+
+### 2.9.2 자식 관계까지 함께 삭제하기
+
+> 구의 증명, 우리는 한 몸이야. 절연하자.
+
+- `JPA`의 `orphanRemoval` 옵션의 기본값은 `false`다. `true`로 변경하여 관계를 맺은 `엔티티(entity)`의 데이터까지 함께 삭제한다.
+- 자식을 먼저 삭제하고 부모를 삭제한다.
+- [김영한 'orphanRemoval과 cascade의 관계'](https://www.inflearn.com/community/questions/137740)
