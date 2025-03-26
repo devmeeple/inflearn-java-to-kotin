@@ -12,3 +12,29 @@
 - 2.8 유저 관련 기능 테스트 작성하기
 - 2.9 책 관련 기능 테스트 작성하기
 - 2.10 테스트 작성 끝! 다음으로!
+
+## 2.7 JUnit5로 Spring Boot 테스트 하기
+
+### POJO(Plain Old Java Object)
+
+- 구조에 종속되지 않는 순수한 자바 객체
+
+1. Can't Extend anything
+2. Can't Implement anything
+3. No outside annotations
+
+- [P O J O](https://martinfowler.com/bliki/POJO.html)
+- [What is a POJO in Java? Almost EVERYONE Gets This Wrong](https://www.youtube.com/watch?v=oqPiEc2zNb0&t=25s)
+
+### 2.7.1 @Autowired constructor
+
+- [Using @Autowired](https://docs.spring.io/spring-framework/reference/core/beans/annotation-config/autowired.html)
+
+### 플랫폼 타입(Platform Type)
+
+```kotlin
+results[0].age must not be null
+```
+
+- 코틀린은 자바와 상호 운용성을 고려하여 설계되었기 때문에 자바 코드를 호출할 수 있다.
+- 차이에서 발생하는 느슨함을 표현하는 타입이다.  
