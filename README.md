@@ -1,5 +1,9 @@
 # Inflearn Java to Kotlin Expansion Pack
 
+# 2. 리팩터링 사전 준비
+
+## 목차
+
 - [[2-3] Configure a Gradle project](https://kotlinlang.org/docs/gradle-configure-project.html): 자바와 코틀린 함께 사용하기
 - 2.6 JUnit5 사용법과 테스트 코드 리팩터링
     - 자주 사용하는 5가지 어노테이션
