@@ -144,6 +144,7 @@ class Member(
     - 공식 문서에 정의되어 있지 않지만 필수 파라미터를 먼저 작성하는 방법을 권장한다.
 - [제미니의 개발실무 'Kotlin JPA Entity ID 선언 전략'](https://youtu.be/gv9D2i07hNU?si=2eKcnoFhvGdyTYfT)
 - [kotlin JPA 에서 entity ID 를 어떻게 선언하는게 좋을까?#1](https://multifrontgarden.tistory.com/304)
+- [No-arg compiler plugin](https://kotlinlang.org/docs/no-arg-plugin.html#jpa-support)
 
 ### 3.2.2 plugin vs. dependency
 
@@ -157,3 +158,4 @@ Caused by: java.lang.NoClassDefFoundError: kotlin/reflect/full/KClasses
 
 - 상황: 코틀린 컴파일러가 `JVM`, `ClassLoader`가 리플랙션을 실행 할 수 없을 때 발생한다.
 - 해결: `dependency`를 추가한다.
+- [Reflection](https://kotlinlang.org/docs/reflection.html)
