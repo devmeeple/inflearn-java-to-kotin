@@ -134,3 +134,26 @@ class Member(
 - **따라서, `JPA 엔티티`는 `영속성[^1] 객체(PO: persistent object)`다.**
 
 [^1]: 데이터가 영원히 이어지도록 임의의 공간에 저장하고 불러온다.
+
+## 3.2 도메인 계층을 Kotlin으로 변경하기 - Book.java
+
+### 3.2.1 JPA Entity 생성하기
+
+- `선택적 매개변수(default parameter)`는 왜 하단에 위치해야할까?
+    - 기술적으로 문제가 되지 않으면 사용성과 가독성을 고려한다.
+    - 공식 문서에 정의되어 있지 않지만 필수 파라미터를 먼저 작성하는 방법을 권장한다.
+- [제미니의 개발실무 'Kotlin JPA Entity ID 선언 전략'](https://youtu.be/gv9D2i07hNU?si=2eKcnoFhvGdyTYfT)
+- [kotlin JPA 에서 entity ID 를 어떻게 선언하는게 좋을까?#1](https://multifrontgarden.tistory.com/304)
+
+### 3.2.2 plugin vs. dependency
+
+- `Gradle` `플러그인(plugin)`과 `의존성(dependency)`의 차이
+    - `plugin`: Gradle 빌드 프로세스 확장
+    - `dependency`: 프로젝트에서 사용하는 라이브러리, 런타임과 컴파일 시점에 사용하는 모듈
+
+```
+Caused by: java.lang.NoClassDefFoundError: kotlin/reflect/full/KClasses
+```
+
+- 상황: 코틀린 컴파일러가 `JVM`, `ClassLoader`가 리플랙션을 실행 할 수 없을 때 발생한다.
+- 해결: `dependency`를 추가한다.
